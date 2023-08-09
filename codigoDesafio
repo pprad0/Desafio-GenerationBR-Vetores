@@ -1,0 +1,76 @@
+_**Código do arquivo .POR (Portugol)**_
+
+programa
+{
+	
+	funcao inicio()
+	{
+	
+		inteiro vetor[10] = {2,5,1,3,4,9,7,8,10,6}
+		inteiro vetorExercicio2[10] = {2,5,1,3,4,9,7,8,10,6}
+		inteiro i, j, k
+		inteiro maiorNumero
+
+		escreva("O vetor ordenado em ordem decrescente ficaria: \n")
+		
+		para ( k = 0 ; k < 10 ; k += 1){
+			maiorNumero = -100
+			
+			//maior numero
+			para ( i = 0 ; i < 10 ; i += 1){
+				se(vetor[i] > maiorNumero ){
+					maiorNumero = vetor[i]
+				}
+			}
+			
+			//substituir
+			para ( j = 0 ; j < 10 ; j += 1){
+				se(vetor[j] == maiorNumero ){
+					vetor[j] = 0
+					escreva(maiorNumero, " ")
+				}	
+			}
+		}
+
+		
+		escreva("\n\nElementos nos índices ímpares: \n")
+		
+		para( k = 0 ; k < 10 ; k += 1) {
+			se(k % 2 == 1){
+				escreva(vetorExercicio2[k], " ")
+			}	
+		} 
+
+
+		escreva("\n\nElementos pares: \n")
+	
+		para( k = 0 ; k < 10 ; k += 1) {
+			se(vetorExercicio2[k] % 2 == 0){
+				escreva(vetorExercicio2[k], " ")
+			}	
+		} 
+
+
+
+		escreva("\n\nSoma: \n")
+		
+		inteiro soma = 0
+		para( k = 0 ; k < 10 ; k += 1) {
+			soma += vetorExercicio2[k]
+		} 
+		escreva(soma)
+
+
+
+
+		escreva("\n\nMédia: \n")		
+
+		inteiro numeroDeElementos = 0
+		inteiro media
+		para( k = 0 ; k < 10 ; k += 1) {
+			numeroDeElementos++
+		} 
+		media = soma / numeroDeElementos
+		escreva(media)
+	}
+}
