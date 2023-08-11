@@ -35,7 +35,7 @@ programa
 		
 		escreva("\n\nElementos nos índices ímpares: \n")
 		
-		para( k = 0 ; k < 10 ; k += 1) {
+		para( k = 0 ; k < 10 ; k += 1) {               //ou para( k= 1 ; k < 10 ; k += 2) {escreva(...)}
 			se(k % 2 == 1){
 				escreva(vetorExercicio2[k], " ")
 			}	
